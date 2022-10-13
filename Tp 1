@@ -1,0 +1,133 @@
+\documentclass[10pt]{book}
+\special{papersize=170mm,240mm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\author{}
+\date{}
+%AddThinSpaceBeforeFootnotes
+%FrenchFootnotes
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\fancyhead[L]{50}
+\fancyhead[C]{Relation,fonction,application}
+\begin{document}
+En résumé
+\begin{itemize}
+\item [--]la propriété de surjectivité de $f$ nous assure l'existence d'une solution mais pas son unicité ;
+\item [--]la propriété d'injectivité de $f$ nous assure que si une solution existe alors elle est unique;
+
+\item [--]enfin, la propriété de bijectivité de $f$ nous assure à la fois l'existence d'une solution et son unicité.
+
+\end{itemize}
+\footnote{${ }^{(5)}$ Rappelons qu'un ensemble qui n'est pas fini est dit infini.\\${ }^{(6)}$ ce qui permet de ne pas confondre deux éléments distincts et de n'en oublier aucun lors du comptage.}
+\subsubsection*{2.2.5 Puissance du dénombrable, puissance du continu}
+Revenons un instant sur la définition de cardinal d'un ensemble. D'après la définition 2.1, un ensemble $E$ est fini lorsque le nombre d'éléments qui le composent est un entier naturel. ${ }^{(5)}$.Dans ce cas, ce nombre est appelé cardinal de l'ensemble, et il est noté card $(E)$. Sa détermination suppose que l'on sache compter les éléments de $E$. L'opération de comptage des éléments d'un ensemble fini est assez intuitive. En pratique, elle revient à établir une correspondance biunivoque $^{(6)}$ entre tous les éléments de $E$ et ceux d'un ensemble fini d'entiers naturels. Autrement dit, elle revient à exhiber un entier $n$ non nul et une bijection
+$$
+\{1,2, \ldots, n\} \longrightarrow E
+$$
+et à conclure que card $(E)=n$. Il est alors clair que tout ensemble $F$ équipotent à $E$ est fini et de même cardinal que $E$ : ils ont le même nombre d'éléments. Dans le langage courant, on dit que $E$ et $F$ sont de "même taille $»$. On peut alors reformuler la définition d'un ensemble infini. C'est un ensemble qui ne peut pas être mis en bijection avec un ensemble fini d'entiers naturels.\\ \\ 
+\mbox{La notion de bijection est un outil rigoureux pour l'étude des ensembles infinis.}\\
+\\
+\hspace{-0.5cm} 
+\begin{tabular}{|p{12cm}|}
+\hline
+\textbf{Définition 2.24} On dit qu'un ensemble infini $E$ est \textbf{dénombrable}(ou qu'il\\
+possède la \textbf{puissance du dénombrable}) lorsqu'il existe mijection entre possède la puissance du dénombrable) lorsqu'il existe une bijection entre\\
+$\mathbb{N}$ et $E$.\\
+\hline
+\end{tabular}
+\subsubsection*{Exemples}
+\begin{enumerate}
+  \item L'ensemble $\mathbb{Z}$ des nombres entiers relatifs est dénombrable puisqu'on peut\\
+expliciter (au moins) une bijection entre $\mathbb{N}$ et $\mathbb{Z}$ C'est l'application de $\mathbb{N}$ dans expliciter (au moins) une bijection enitre $\mathbb{N}$ et $\mathbb{Z}$. C'est l'application de $\mathbb{N}$ dans
+$\mathbb{Z}$ définie par
+\end{enumerate}
+$$
+n \in \mathbb{N} \longmapsto \begin{cases}n / 2 & \text { si } n \text { est pair } \\ -(n+1) / 2 & \text { si } n \text { est impair }\end{cases}
+$$
+On a par exemple les correspondances suivantes
+$$
+\begin{array}{rlrlrr}
+0 & \longmapsto & 0 & 5 & \longmapsto & \longmapsto \\
+1 & \longmapsto & -1 & 6 & \longmapsto & 3 \\
+2 & \longmapsto & 1 & 7 & \longmapsto & -4 \\
+3 & \longmapsto & -2 & 8 & \longmapsto & \\
+4 & \longmapsto & 2 & & \ldots &
+\end{array}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item Le produit cartésien $\mathbb{N} \times \mathbb{N}$ est dénombrable. En effet, il suffit de considérer l'application de $\mathbb{N} \times \mathbb{N}$ dans $\mathbb{N}$ définie par
+\end{enumerate}
+$$
+(p, q) \in \mathbb{N} \times \mathbb{N} \longmapsto \frac{(p+q) \times(p+q+1)}{2}+q \in \mathbb{N} .
+$$
+C'est une bijection entre $\mathbb{N} \times \mathbb{N}$ et $\mathbb{N}$. Par exemple, on a les correspondances
+$$
+\begin{aligned}
+& (0,0) \longmapsto 0 \quad(3,0) \longmapsto 6 \\
+& (1,0) \longmapsto 1 \quad(2,1) \longmapsto 7 \\
+& (0,1) \longmapsto 2 \quad(1,2) \longmapsto 8 \\
+& (2,0) \longmapsto 3 \quad(0,3) \longmapsto 9 \\
+& (1,1) \longmapsto 4 \quad(4,0) \longmapsto 10 \\
+& (0,2) \longmapsto 5
+\end{aligned}
+$$
+On peut montrer que toute partie infinie d'un ensemble dénombrable est dénomproduit cartésien d'un nombre fini d'ensembles dénombrables est dénombrable. donc des ensembles infinis de «même taille ».
+
+La notion de bijection permet de distinguer d'autres types d'infinis, dont le plus classique est la puissance du continu.\\
+\begin{tabular}{|p{12cm}|}
+\hline
+\textbf{Définition 2.25} On dit qu'un ensemble infini $E$ possède la puissance du continu lorsqu'il existe une bijection entre $\mathbb{R}$ et $E$.\\
+\hline
+\end{tabular}
+
+
+On peut montrer que $\mathbb{R}$ est équipotent à l'ensemble $\mathcal{P}(\mathbb{N})$ des parties de $\mathbb{N}$. On peut aussi montrer qu'un ensemble ne peut pas être équipotent à l'ensemble de ses parties (théorème fondamental de Cantor). Ces deux résultats sont admis. Cela met en évidence une hiérarchie des infinis, et en ce sens, on dit que la puissance du continu est strictement supérieure à celle du dénombrable, ce que Ion résume en écrivant
+$$
+\aleph_{0}<\aleph_{1}
+$$
+Eu utilisant le langage courant, on peut dire que l'ensemble infini $\mathbb{R}$ est « de taille strictement supérieure $"$ à celle des ensembles infinis $\mathbb{N}, \mathbb{Z}$ et $\mathbb{Q}$.
+\footnote{${ }^{(7)}$Le symbole $\aleph$ (on dit aleph) est la première lettre de l'alphabet hébreu. Rappelons que pour tout ensemble fini $E$ ayant $n$ éléments, le cardinal de $\mathcal{P}(E)$ est égal à $2^{n}$. Par analogie avec le cas fini, le symbole $\aleph_{1}$ désignant la puissance du continu est parfois noté $2^{k_{0}}$ puisque $\mathbb{R}$ est équipotent à $\mathcal{P}(\mathbb{N})$.}\\
+\subsubsection*{Georg Ferdinand (1845, Saint-Pétersbourg - 1918, Halle, Allemagne)} 
+\hspace{\stretch{1}} \rule{1\linewidth}{1mm} \hspace{\stretch{1}}  \begin{wrapfigure}{l}{0.5\textwidth}
+\begin{center}
+\includegraphics[width=0.48\textwidth]{math.jpg}
+\end{center}  
+\end{wrapfigure}
+Professeur de mathématiques à l'Université de Halle, il fut un
+des principaux fondateurs de la théorie des ensembles. C'est en constatant (avec son ami mathématicien Richard Dedekind) qu'il existait une hiérarchie dans les ensembles infinis, que Cantor fut amené à introduire de nouveaux nombres, les ordinaux transfinis, et à définir une arithmétique sur ces nombres. Ses résultats, révolutionnaires pour l'époque, bouleversèrent les fondements des mathématiques, jusqu'à s'attirer les inimitiés d'autres grands savants comme le mathématicien allemand Leopold Kronecker qui l'empêcha de publier. Souffrant de dépression et de schizophrénie, il se désintéressa progressivement des mathématiques pour se consacrer, sur la fin de sa vie, à l'histoire et à la littérature anglais.\\
+
+\hspace{\stretch{1}} \rule{1\linewidth}{1mm} \hspace{\stretch{1}} \subsubsection*{\textbf{Exemples}}
+\begin{enumerate}
+  \item Tout intervalle de $\mathbb{R}$, non réduit à un élément et non vide, est équipotent à $\mathbb{R}$. C'est le cas, par exemple, de l'intervalle ] - 1,7[ puisque l'application
+\end{enumerate}
+$$
+x \in]-1,7\left[\longmapsto \tan \left(\frac{\pi(x-3)}{8}\right) \in \mathbb{R}\right.
+$$
+définit une bijection entre l'intervalle ] - 1,7[ et $\mathbb{R}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item L'ensemble $\mathbb{R} \backslash \mathbb{Q}$ des nombres irrationnels n'est pas dénombrable. Utilisons un raisonnement par l'absurde. Supposons que l'ensemble infini $\mathbb{R} \backslash \mathbb{Q}$ soit dénombrable. Alors, l'union de deux ensembles dénombrables étant dénombrable, l'ensemble $(\mathbb{R} \backslash \mathbb{Q}) \cup \mathbb{Q}=\mathbb{R}$ serait aussi dénombrable, ce qui est absurde puisque $\mathbb{R}$ possède la puissance du continu.
+
+  \item On peut montrer que le produit cartésien de deux ensembles équipotents à $\mathbb{R}$ possède la puissance du continu. Ainsi, l'ensemble $\mathbb{C}$ des nombres complexes possède la puissance du continu. Les deux ensembles infinis $\mathbb{R}$ et $\mathbb{C}$ sont donc « de même taille».
+
+\end{enumerate}
+Remarque Il existe une bijection entre l'ensemble des entiers naturels $\mathbb{N}$ et le sous-ensemble constitué des entiers naturels pairs. De même, il existe une bijection entre l'ensemble des réels $\mathbb{R}$ et l'intervalle ] $a, b[$ avec $a \in \mathbb{R}$ et $b \in \mathbb{R}$. Plus généralement, on peut montrer qu'une condition nécessaire et suffisante pour qu'un ensemble $E$ soit infini est qu'il existe une bijection entre $E$ et une de ses parties, distincte de $E$.
+
+\subsubsection*{\textbf{2.2.6 Restriction et prolongement d'une application}}
+Rappelons qu'une application est un triplet constitué d'un ensemble de départ, d'un ensemble d'arrivée, et d'un graphe, ce dernier nous indiquant le mode opé-
+
+
+\end{document}
